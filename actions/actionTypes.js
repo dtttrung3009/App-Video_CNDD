@@ -1,0 +1,3 @@
+export const FETCH_VIDEO='FETCH_VIDEO';
+export const FETCH_FAILED='FETCH_FAILED';
+export const FETCH_SUCCESS='FETCH_SUCCESS';
