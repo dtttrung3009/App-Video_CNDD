@@ -16,9 +16,9 @@ export default class VideoComponent extends Component {
                     justifyContent: 'center',
                 }}>
                     <Text style={{
-                        fontSize: 20,
+                        fontSize: 40,
                         fontWeight: 'bold',
-                        color: 'mediumseagreen',
+                        color: '#282C34',
                     }}>App Video </Text>
                 </View>
 

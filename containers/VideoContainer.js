@@ -13,6 +13,7 @@ const mapDispatchToProps = (dispatch) => {
     return {
         onFetchMovies: () => {
             dispatch(fetchVideoAction());
+
         }
     };
 };
