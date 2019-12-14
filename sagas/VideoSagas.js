@@ -9,7 +9,7 @@ function* getVideo() {
     try {
         const receivedVideos = yield Api.getVideoFromApi();
         yield put({type: FETCH_SUCCESS, receivedVideos: receivedVideos});
-        console.log(receivedVideos);
+        // console.log(receivedVideos);
     } catch (e) {
         yield put({type: FETCH_FAILED, error: e});
         console.log(`error ${e}`);

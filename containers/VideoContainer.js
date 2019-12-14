@@ -4,7 +4,7 @@ import {fetchVideoAction} from '../actions/indexAction';
 import VideoComponent from '../components/VideoComponent';
 
 const mapStateToProps = (state) => {
-    console.log(`Video ${JSON.stringify(state.videos)}`);
+    // console.log(`Video ${JSON.stringify(state.videos)}`);
     return {
         videos: state.videoReducers,
     };

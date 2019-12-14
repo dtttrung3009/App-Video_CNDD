@@ -9,14 +9,46 @@ import {Provider} from 'react-redux';
 import allReducers from './reducers/indexReducer';
 import rootSaga from './sagas/rootSaga';
 import createSagaMiddleware from 'redux-saga';
-import VideoContainer from './containers/VideoContainer';
-
+import {createAppContainer} from 'react-navigation';
+import { createBottomTabNavigator } from 'react-navigation-tabs';
 const sagaMiddleware=createSagaMiddleware();
+import CloudComponent from './components/CloudComponent';
+import HomeComponent from './components/HomeComponent';
+import InfoComponent from './components/InfoComponent';
+import UserComponent from './components/UserComponent';
 let store=createStore(allReducers,applyMiddleware(sagaMiddleware));
 const App=()=>(
     <Provider store={store}>
-        <VideoContainer/>
+        <AppContainer/>
     </Provider>
 )
 sagaMiddleware.run(rootSaga)
+const MainStack = createBottomTabNavigator(
+    {
+        Home: {
+            screen: HomeComponent,
+        },
+        Cloud:{
+            screen:CloudComponent,
+        },
+        Info: {
+            screen: InfoComponent,
+        },
+        User:{
+            screen:UserComponent,
+        },
+    },
+    {
+        initialRouteName:'Home',
+    },
+);
+
+
+const AppContainer = createAppContainer(MainStack);
+class AppVideo extends React.Component {
+    render() {
+        return <AppContainer/>;
+    }
+}
+
 AppRegistry.registerComponent(appName, () => App);

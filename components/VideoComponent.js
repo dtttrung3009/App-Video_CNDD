@@ -1,29 +1,35 @@
 import React, {Component} from 'react';
 
-import {Text, View, FlatList} from 'react-native';
+import {Text, View, FlatList, Image} from 'react-native';
 import FlatListItem from './FlatListItem';
+import { SearchBar } from 'react-native-elements';
+
+const backgroundColor = '#964f8e';
 export default class VideoComponent extends Component {
+
     componentDidMount() {
-        console.log('Ham did mount da chay');
         this.props.onFetchMovies();
     }
 
+    static navigationOptions = ({navigation}) => {
+        const {params = {}} = navigation.state;
+        let tabBarLabel = 'Video';
+        let tabBarIcon = () => (
+            <Image
+                source={require('../icons/cloud-icon.png')}
+                style={{width: 26, height: 26, tintColor: backgroundColor}}/>
+        );
+        return {tabBarLabel, tabBarIcon};
+    };
     render() {
+
         return (
-            <View style={{flex: 1}}>
-                <View style={{
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                }}>
-                    <Text style={{
-                        fontSize: 40,
-                        fontWeight: 'bold',
-                        color: '#282C34',
-                    }}>App Video </Text>
-                </View>
+            <View style={{flex:1}}>
+                <SearchBar
+                    placeholder="Type Here..."
 
+                />
                 <FlatList
-
                     data={this.props.videos}
                     keyExtractor={(item) => item.id}
                     renderItem={({item, index}) =>
