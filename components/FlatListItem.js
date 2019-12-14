@@ -6,18 +6,18 @@ class FlatListItem extends Component {
     constructor(props) {
         super(props);
     }
-
-    getUrl(url) {
-        let separator = 'videos/';
-        let newUrl = 'none';
-        let index = url.indexOf(separator);
-        if (index > 0) {
-            let urlsplt = url.split(separator, 2);
-            let id = urlsplt[1].split('/');
-            newUrl = 'https://www.facebook.com/video/embed?video_id=' + id;
-        }
-        return newUrl;
-    }
+    //
+    // getUrl(url) {
+    //     let separator = 'videos/';
+    //     let newUrl = 'none';
+    //     let index = url.indexOf(separator);
+    //     if (index > 0) {
+    //         let urlsplt = url.split(separator, 2);
+    //         let id = urlsplt[1].split('/');
+    //         newUrl = 'https://www.facebook.com/video/embed?video_id=' + id;
+    //     }
+    //     return newUrl;
+    // }
 
     render() {
         return (
