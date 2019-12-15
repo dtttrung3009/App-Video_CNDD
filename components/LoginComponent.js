@@ -3,6 +3,7 @@ import {Text, View, Image, Button, Alert} from 'react-native';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import {GoogleSignin, GoogleSigninButton, statusCodes} from 'react-native-google-signin';
 import firebase from 'react-native-firebase';
+import { TextInput } from 'react-native-gesture-handler';
 
 const backgroundColor = '#964f8e';
 
@@ -55,17 +56,27 @@ class LoginComponent extends Component {
     }
     render() {
         return (
+
             <View style={{
                 flex: 1,
-                backgroundColor: '#D0F5A9',
+                backgroundColor: '#D8D8D8',
                 alignItems: 'center',
                 justifyContent: 'center',
             }}>
+                <View>
+                <TextInput placeholder="Enter uername" style={{width:312,height:40,borderWidth:2,borderRadius:5,borderColor:'#A4A4A4',marginBottom:20,color:'black',backgroundColor:'white'}}></TextInput>
+                <TextInput placeholder="Enter password" secureTextEntry={true} style={{width:312,height:40,borderWidth:2,borderRadius:5,color:'black',backgroundColor:'white',borderColor:'#A4A4A4',marginBottom:20}}></TextInput>
+                </View>
+                <Button title='Login' style={{padding:20}}></Button>
                 <GoogleSigninButton
-                    style={{width: 312, height: 48}}
+                    style={{width: 312, height: 48,marginTop:20}}
                     size={GoogleSigninButton.Size.Wide}
                     color={GoogleSigninButton.Color.Light}
                     onPress={() => { this._signIn(); }}/>
+                    <View style={{flexDirection:"row"}}>
+                    <Ionicons  name='logo-facebook' color="blue" size={24}/>
+
+                    </View>
             </View>
         );
     }
