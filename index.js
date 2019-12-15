@@ -15,7 +15,7 @@ const sagaMiddleware=createSagaMiddleware();
 import LoginComponent from './components/LoginComponent';
 import HomeComponent from './components/HomeComponent';
 import InfoComponent from './components/InfoComponent';
-import UserComponent from './components/UserComponent';
+import SettingComponent from './components/SettingComponent';
 let store=createStore(allReducers,applyMiddleware(sagaMiddleware));
 const App=()=>(
     <Provider store={store}>
@@ -34,8 +34,8 @@ const MainStack = createBottomTabNavigator(
         Info: {
             screen: InfoComponent,
         },
-        User:{
-            screen:UserComponent,
+        Setting:{
+            screen:SettingComponent,
         },
     },
     {

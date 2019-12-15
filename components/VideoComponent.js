@@ -11,15 +11,15 @@ export default class VideoComponent extends Component {
         this.props.onFetchMovies();
         this.state = {
             filterVideo: '',
-            list: null
+            list: this.props.videos,
         };
     }
 
     componentDidMount() {
         this.props.onFetchMovies();
         this.setState({
-            list:this.props.videos
-        })
+            list: this.props.videos,
+        });
     }
 
     static navigationOptions = ({navigation}) => {
@@ -43,6 +43,7 @@ export default class VideoComponent extends Component {
                 return i.description.toLowerCase().indexOf(filterVideo.toLowerCase()) !== -1;
             });
         }
+        if(filterVideo==="") list=list;
         return (
             <View style={{flex: 1}}>
                 <SearchBar

@@ -57,7 +57,7 @@ class LoginComponent extends Component {
         return (
             <View style={{
                 flex: 1,
-                backgroundColor: backgroundColor,
+                backgroundColor: '#D0F5A9',
                 alignItems: 'center',
                 justifyContent: 'center',
             }}>
