@@ -30,7 +30,7 @@ class FlatListItem extends Component {
                         scrollEnabled={true}
                         javaScriptEnabled={true}
                         domStorageEnabled={true}
-                        allowfullscreen={true}
+                        allowsFullscreenVideo={true}
                         source={{uri: this.props.url}}
                     />
 

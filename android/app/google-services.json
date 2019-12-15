@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "39216247309",
+    "firebase_url": "https://appvideo-ba23a.firebaseio.com",
+    "project_id": "appvideo-ba23a",
+    "storage_bucket": "appvideo-ba23a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:39216247309:android:f858f3bbf16dd5ba69db44",
+        "android_client_info": {
+          "package_name": "com.appvideo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "39216247309-kp6d3o5majdb7ljcb781rtt2lj9op7tq.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.appvideo",
+            "certificate_hash": "658a595f3a013acf72e45e41e248070e2cdb101b"
+          }
+        },
+        {
+          "client_id": "39216247309-j4r41ff30f8focgg65ndmhpkd7ar4dga.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAQsoBGONrKFDYg2sn3BxYfwpn2B2gNnhw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "39216247309-j4r41ff30f8focgg65ndmhpkd7ar4dga.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -8,15 +8,18 @@ const backgroundColor = '#964f8e';
 export default class VideoComponent extends Component {
     constructor(props) {
         super(props);
+        this.props.onFetchMovies();
         this.state = {
             filterVideo: '',
-            list:this.props.videos
+            list: null
         };
     }
 
-
     componentDidMount() {
         this.props.onFetchMovies();
+        this.setState({
+            list:this.props.videos
+        })
     }
 
     static navigationOptions = ({navigation}) => {
@@ -31,15 +34,14 @@ export default class VideoComponent extends Component {
     };
     onChange = filterVideo => {
         this.setState({filterVideo});
-        console.log(filterVideo);
     };
 
     render() {
-        var {filterVideo,list} = this.state;
-        if(filterVideo){
-            list=list.filter((i)=>{
-                return i.description.toLowerCase().indexOf(filterVideo.toLowerCase())!==-1;
-            })
+        var {filterVideo, list} = this.state;
+        if (filterVideo) {
+            list = list.filter((i) => {
+                return i.description.toLowerCase().indexOf(filterVideo.toLowerCase()) !== -1;
+            });
         }
         return (
             <View style={{flex: 1}}>

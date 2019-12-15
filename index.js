@@ -12,7 +12,7 @@ import createSagaMiddleware from 'redux-saga';
 import {createAppContainer} from 'react-navigation';
 import { createBottomTabNavigator } from 'react-navigation-tabs';
 const sagaMiddleware=createSagaMiddleware();
-import CloudComponent from './components/CloudComponent';
+import LoginComponent from './components/LoginComponent';
 import HomeComponent from './components/HomeComponent';
 import InfoComponent from './components/InfoComponent';
 import UserComponent from './components/UserComponent';
@@ -28,8 +28,8 @@ const MainStack = createBottomTabNavigator(
         Home: {
             screen: HomeComponent,
         },
-        Cloud:{
-            screen:CloudComponent,
+        Login:{
+            screen:LoginComponent,
         },
         Info: {
             screen: InfoComponent,
